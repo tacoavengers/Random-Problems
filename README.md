@@ -31,4 +31,32 @@ digitSumsdifference(412)
 This is a classic problem.  Given an array of numbers; for instance, [1,2,3,4,5]    
 find two numbers that add up to 9.  In this case it would 4 and 5.    
 This solution assumes that the numbers are in ascending order.  If they're all    
-jumbled up, then a different approach is necessary.
+jumbled up, then a different approach is necessary.    
+
+The basic idea is that if the sum is larget than the target, we start on the    
+right side and move left one position in the index.  If the sum is less than    
+the target from the left we move right one digit.  So if 1 + 12 give us 13,    
+we know that we don't need the one in the next attempt.  We move over to the    
+number 3.  3 + 12 = 15.  We don't need the 3. It can't get us to 17.  We move    
+over to the right one more time to 5.  5 + 12 = 17.  Great we got the answer.
+
+```
+def twoSum(numbers, target):
+    
+    l = 0
+    r = len(numbers) -1
+    
+    while l < r:
+        curSum = numbers[l] + numbers[r]
+        
+        if curSum > target:
+            r -= 1
+        elif curSum < target:
+            l += 1
+        else:
+            return [l, r]                   # returns index locations
+            return [numbers[l], numbers[r]] # returns numbers
+
+nums = [1,3,5,8,12]
+print(twoSum(nums, 17))
+```
