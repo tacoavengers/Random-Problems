@@ -72,5 +72,21 @@ def tryMe(num):
 nums = [1,2,3,3,4,5]  
 print(tryMe(nums)) // True
 ```
+For longer lists
+```
+def tryMe(num):
+    s = set()
+
+    for num in nums:  # 0(n)
+         if num in s:
+             s.remove(num)
+         else:
+             s.add(num) 
+    return s.pop()
+    
+nums = [1,2,3,3,4,5]  
+print(tryMe(nums)) // True
+
+            
 
 
