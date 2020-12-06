@@ -87,6 +87,16 @@ def tryMe(num):
 nums = [1,2,3,3,4,5]  
 print(tryMe(nums)) // True
 ```
+and
+```
+s = set()
+        
+     for num in nums:
+	      if num not in s:
+	          s.add(num)
+	      else:
+	         return True
+ ```
             
 
 
