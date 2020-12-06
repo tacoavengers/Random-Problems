@@ -27,3 +27,8 @@ def digitSumsDifference(n):
     
 digitSumsdifference(412)
 ```
+### 2. Get the sum of two numbers
+This is a classic problem.  Given an array of numbers; for instance, [1,2,3,4,5]    
+find two numbers that add up to 9.  In this case it would 4 and 5.    
+This solution assumes that the numbers are in ascending order.  If they're all    
+jumbled up, then a different approach is necessary.
