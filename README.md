@@ -35,8 +35,8 @@ jumbled up, then a different approach is necessary.
 
 The basic idea is that if the sum is larger than the target, we start on the    
 right side and move left one position in the index.  If the sum is less than    
-the target from the left we move right one digit.  So if 1 + 12 give us 13,    
-we know that we don't need the one in the next attempt.  We move over to the    
+the target from the left we move right one digit.  So if 1 + 12 gives us 13,    
+we know that we don't need the 1 in the next attempt.  We move over to the    
 number 3.  3 + 12 = 15.  We don't need the 3. It can't get us to 17.  We move    
 over to the right one more time to 5.  5 + 12 = 17.  Great we got the answer.
 
