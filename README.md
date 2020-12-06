@@ -33,7 +33,7 @@ find two numbers that add up to 9.  In this case it would 4 and 5.
 This solution assumes that the numbers are in ascending order.  If they're all    
 jumbled up, then a different approach is necessary.    
 
-The basic idea is that if the sum is larget than the target, we start on the    
+The basic idea is that if the sum is larger than the target, we start on the    
 right side and move left one position in the index.  If the sum is less than    
 the target from the left we move right one digit.  So if 1 + 12 give us 13,    
 we know that we don't need the one in the next attempt.  We move over to the    
