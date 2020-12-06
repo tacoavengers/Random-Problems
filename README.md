@@ -41,7 +41,7 @@ number 3.  3 + 12 = 15.  We don't need the 3. It can't get us to 17.  We move
 over to the right one more time to 5.  5 + 12 = 17.  Great we got the answer.
 
 ```
-def twoSum(numbers, target):
+def twoSum(numbers, target): # 0(n) time complexity
     
     l = 0
     r = len(numbers) -1
@@ -60,3 +60,17 @@ def twoSum(numbers, target):
 nums = [1,3,5,8,12]
 print(twoSum(nums, 17))
 ```
+
+### 3. Look for duplicate numbers
+This actually has two solutions.  For short lists use the any() function    
+as a comprehension solution.
+```
+def tryMe(num):
+    dups = any(num.count(i) > 1 for i in num)
+    return dups
+  
+nums = [1,2,3,3,4,5]  
+print(tryMe(nums)) // True
+```
+
+
