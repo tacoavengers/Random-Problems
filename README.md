@@ -60,6 +60,25 @@ def twoSum(numbers, target): # 0(n) time complexity
 nums = [1,3,5,8,12]
 print(twoSum(nums, 17))
 ```
+With unsorted numbers
+```
+nums = [4,3,5,2,6]
+target = 10
+
+def two_sum(nums,target):
+    if len(nums) <= 1:
+        return False
+        
+    aux_dict = {}
+    for i in range(len(nums)):
+        if nums[i] in aux_dict:
+            return [aux_dict[ nums[i]], i]
+        else:
+            aux_dict[target - nums[i]] = i
+
+print(two_sum(nums, target))
+```
+
 
 ### 3. Look for duplicate numbers
 This actually has two solutions.  For short lists use the any() function    
